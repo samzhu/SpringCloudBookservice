@@ -1,7 +1,7 @@
 machine:
   environment:
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-3.2.1/bin:$PATH"
-    CLASSPATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-3.2.1/lib"
+    APP_HOME: "~/$CIRCLE_PROJECT_REPONAME"
   services:
     - docker
   java:
@@ -9,9 +9,8 @@ machine:
 
 dependencies:
   pre:
-    - wget "https://services.gradle.org/distributions/gradle-3.2.1-bin.zip"; unzip gradle-3.2.1-bin.zip
+#    - wget "https://services.gradle.org/distributions/gradle-3.2.1-bin.zip"; unzip gradle-3.2.1-bin.zip
     - chmod +x gradlew
-    - echo $CLASSPATH
   override:
     - docker info
 
