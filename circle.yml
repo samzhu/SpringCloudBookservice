@@ -11,6 +11,7 @@ dependencies:
     - wget "https://services.gradle.org/distributions/gradle-3.2.1-bin.zip"; unzip gradle-3.2.1-bin.zip
   override:
     - docker info
+    - chmod +x gradlew
 
 deployment:
   hub:
