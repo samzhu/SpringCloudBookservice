@@ -1,6 +1,7 @@
 machine:
   environment:
     PATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-3.2.1/bin:$PATH"
+    CLASSPATH: "~/$CIRCLE_PROJECT_REPONAME/gradle-3.2.1/lib"
   services:
     - docker
   java:
